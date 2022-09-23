@@ -44,6 +44,17 @@ null_ls.setup({
         code_actions.eslint.with({
             prefer_local = 'node_modules/.bin',
         }),
+        -- rustfmt
+        formatting.rustfmt,
+        -- Python
+        -- pip install black
+        -- asdf reshim python
+        -- formatting.black.with({ extra_args = { '--fast' } }),
+        -----------------------------------------------------
+        -- Ruby
+        -- gem install rubocop
+        -- formatting.rubocop,
+        -----------------------------------------------------
     },
     -- #{m}: message
     -- #{s}: source name (defaults to null-ls if not specified)
