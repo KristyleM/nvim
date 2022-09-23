@@ -42,6 +42,7 @@ packer.startup({
                 require('nvim-autopairs').setup({})
             end,
         })
+        use('numToStr/Comment.nvim')
         use('b0o/schemastore.nvim')
         use({ 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = 'nvim-lua/plenary.nvim' })
     end,
