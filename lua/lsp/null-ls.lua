@@ -31,6 +31,7 @@ null_ls.setup({
                 'json',
                 'yaml',
                 'graphql',
+                'go',
             },
             extra_filetypes = { 'njk' },
             prefer_local = 'node_modules/.bin',
@@ -46,6 +47,8 @@ null_ls.setup({
         }),
         -- rustfmt
         formatting.rustfmt,
+        -- golang
+        formatting.gofmt,
         -- Python
         -- pip install black
         -- asdf reshim python
