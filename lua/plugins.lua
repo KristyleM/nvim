@@ -14,6 +14,7 @@ packer.startup({
         use('glepnir/dashboard-nvim')
         use('ahmedkhalf/project.nvim')
         use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+        use({ 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' })
         --------------------- LSP --------------------
         use('williamboman/nvim-lsp-installer')
         -- Lspconfig

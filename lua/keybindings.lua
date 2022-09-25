@@ -21,12 +21,21 @@ map('n', '<leader>h', '<C-w>h', opt)
 map('n', '<leader>j', '<C-w>j', opt)
 map('n', '<leader>k', '<C-w>k', opt)
 map('n', '<leader>l', '<C-w>l', opt)
+-- 当前 window 移动到最左边
+map('n', '<leader>H', '<C-w>H', opt)
+-- 当前 window 移动到最下边
+map('n', '<leader>J', '<C-w>J', opt)
+-- 当前 window 移动到最上边
+map('n', '<leader>K', '<C-w>K', opt)
+-- 当前 window 移动到最右边
+map('n', '<leader>L', '<C-w>L', opt)
+map('n', '<leader>x', '<C-w>x', opt)
 -- 左右比例控制
 map('n', '<C-Left>', ':vertical resize -2<CR>', opt)
 map('n', '<C-Right>', ':vertical resize +2<CR>', opt)
 -- 上下比例
-map('n', '<C-Down>', ':resize +2<CR>', opt)
-map('n', '<C-Up>', ':resize -2<CR>', opt)
+map('n', '<C-Down>', ':resize -2<CR>', opt)
+map('n', '<C-Up>', ':resize +2<CR>', opt)
 -- 等比例
 map('n', 's=', '<C-w>=', opt)
 -- Terminal相关
@@ -46,17 +55,17 @@ map('v', 'K', ":move '<-2<CR>gv-gv", opt)
 -- 上下滚动浏览
 map('n', '<C-j>', '5j', opt)
 map('n', '<C-k>', '5k', opt)
--- ctrl u / ctrl + d  只移动9行，默认移动半屏
+-- ctrl u / ctrl + d  只移动10行，默认移动半屏
 map('n', '<C-u>', '10k', opt)
 map('n', '<C-d>', '10j', opt)
 -- 在visual 模式里粘贴不要复制
 map('v', 'p', '"_dP', opt)
 -- 退出
 map('n', 'qq', ':q<CR>', opt)
-map('n', 'Q', ':qa!<CR>', opt)
+map('n', 'Q', ':qa<CR>', opt)
 -- insert 模式下，跳到行首行尾
-map('i', '<C-h>', '<ESC>I', opt)
-map('i', '<C-l>', '<ESC>A', opt)
+map('i', '<C-I>', '<ESC>I', opt)
+map('i', '<C-A>', '<ESC>A', opt)
 map('i', '<C-h>', '<ESC>ha', opt)
 map('i', '<C-j>', '<ESC>ja', opt)
 map('i', '<C-k>', '<ESC>ka', opt)
@@ -67,6 +76,10 @@ map('i', '<C-b>', '<ESC>bi', opt)
 ---------------------------------------
 -- 插件快捷键
 local pluginKeys = {}
+
+-- diffview 快捷键设置
+map('n', '<leader>g', ':DiffviewOpen<CR>', opt)
+map('n', '<leader>G', ':DiffviewFileHistory<CR>', opt)
 
 -- nvim-tree
 -- alt + m 键打开关闭tree
@@ -90,6 +103,7 @@ pluginKeys.nvimTreeList = {
     { key = 'c', action = 'copy' },
     { key = 'p', action = 'paste' },
     -- { key = "s", action = "system_open" },
+    { key = 's', action = '' },
 }
 
 -- bufferline
@@ -98,7 +112,7 @@ map('n', '<C-h>', ':BufferLineCyclePrev<CR>', opt)
 map('n', '<C-l>', ':BufferLineCycleNext<CR>', opt)
 -- 关闭
 --"moll/vim-bbye"
-map('n', '<C-w>', ':Bdelete!<CR>', opt)
+-- map('n', '<C-w>', ':Bdelete!<CR>', opt)
 map('n', '<leader>bl', ':BufferLineCloseRight<CR>', opt)
 map('n', '<leader>bh', ':BufferLineCloseLeft<CR>', opt)
 map('n', '<leader>bc', ':BufferLinePickClose<CR>', opt)
@@ -108,6 +122,8 @@ map('n', '<leader>bc', ':BufferLinePickClose<CR>', opt)
 map('n', '<C-p>', ':Telescope find_files<CR>', opt)
 -- 全局搜索
 map('n', '<C-f>', ':Telescope live_grep<CR>', opt)
+map('n', '<C-g>', ':Telescope git_status<CR>', opt)
+
 -- Telescope 列表中 插入模式快捷键
 pluginKeys.telescopeList = {
     i = {
@@ -121,6 +137,9 @@ pluginKeys.telescopeList = {
         ['<C-p>'] = 'cycle_history_prev',
         -- 关闭窗口
         ['<C-c>'] = 'close',
+        -- 打开文件
+        ['sv'] = 'file_vsplit',
+        ['sh'] = 'file_split',
         -- 预览窗口上下滚动
         ['<C-u>'] = 'preview_scrolling_up',
         ['<C-d>'] = 'preview_scrolling_down',
