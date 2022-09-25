@@ -52,7 +52,7 @@ null_ls.setup({
         -- Python
         -- pip install black
         -- asdf reshim python
-        -- formatting.black.with({ extra_args = { '--fast' } }),
+        formatting.black.with({ extra_args = { '--fast' } }),
         -----------------------------------------------------
         -- Ruby
         -- gem install rubocop
