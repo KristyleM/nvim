@@ -25,6 +25,9 @@ map('n', '<leader>k', '<C-w>k', opt)
 map('n', '<leader>l', '<C-w>l', opt)
 -- 当前 window 移动到最左边
 map('n', '<leader>H', '<C-w>H', opt)
+-- 寄存器+操作
+map('n', '\\', '"+', opt)
+map('v', '\\', '"+', opt)
 -- 当前 window 移动到最下边
 map('n', '<leader>J', '<C-w>J', opt)
 -- 当前 window 移动到最上边
