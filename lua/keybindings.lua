@@ -87,7 +87,7 @@ local pluginKeys = {}
 
 -- diffview 快捷键设置
 map('n', '<leader>g', ':DiffviewOpen<CR>', opt)
-map('n', '<leader>G', ':DiffviewFileHistory<CR>', opt)
+map('n', '<leader>G', ':DiffviewFileHistory %<CR>', opt)
 
 -- nvim-tree
 -- alt + m 键打开关闭tree
