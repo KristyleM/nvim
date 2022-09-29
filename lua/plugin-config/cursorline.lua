@@ -1,4 +1,4 @@
-local status, cursorline = pcall(require, 'nvim-cursorline ')
+local status, cursorline = pcall(require, 'nvim-cursorline')
 if not status then
     vim.notify('没有找到 cursorline')
     return

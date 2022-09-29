@@ -5,6 +5,7 @@ packer.startup({
         -- add plugins here
         use('wbthomason/packer.nvim')
         use('folke/tokyonight.nvim')
+        use('morhetz/gruvbox')
         use('sainnhe/sonokai')
         use({ 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' })
         use({ 'akinsho/bufferline.nvim', requires = { 'kyazdani42/nvim-web-devicons', 'moll/vim-bbye' } })
