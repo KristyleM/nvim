@@ -66,6 +66,8 @@ map('v', '<C-k>', '5k', opt)
 -- ctrl u / ctrl + d  只移动10行，默认移动半屏
 map('n', '<C-u>', '10k', opt)
 map('n', '<C-d>', '10j', opt)
+map('v', '<C-u>', '10j', opt)
+map('v', '<C-d>', '10k', opt)
 -- 在visual 模式里粘贴不要复制
 map('v', 'p', '"_dP', opt)
 -- 退出
@@ -167,8 +169,8 @@ pluginKeys.mapLSP = function(mapbuf)
     mapbuf('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', opt)
     mapbuf('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', opt)
     -- diagnostic
-    mapbuf('n', 'gp', '<cmd>lua vim.diagnostic.open_float()<CR>', opt)
-    mapbuf('n', 'gk', '<cmd>lua vim.diagnostic.goto_prev()<CR>', opt)
+    mapbuf('n', 'gp', '<cmd>lua vim.diagnostic.open_float()<cr>', opt)
+    mapbuf('n', 'gk', '<cmd>lua vim.diagnostic.goto_prev()<cr>', opt)
     mapbuf('n', 'gj', '<cmd>lua vim.diagnostic.goto_next()<CR>', opt)
     mapbuf('n', '<leader>f', '<cmd>lua vim.lsp.buf.formatting()<CR>', opt)
     -- 没用到
