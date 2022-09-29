@@ -53,6 +53,7 @@ packer.startup({
         use('simrat39/symbols-outline.nvim')
         use('yamatsum/nvim-cursorline')
         use('kylechui/nvim-surround')
+        use('lewis6991/gitsigns.nvim')
     end,
     config = {
         display = {
