@@ -48,6 +48,8 @@ packer.startup({
         use({ 'jose-elias-alvarez/nvim-lsp-ts-utils', requires = 'nvim-lua/plenary.nvim' })
         -- Rust 增强
         use('simrat39/rust-tools.nvim')
+        -- 函数、类导航栏
+        use('simrat39/symbols-outline.nvim')
     end,
     config = {
         display = {

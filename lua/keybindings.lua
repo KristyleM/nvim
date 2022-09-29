@@ -87,6 +87,9 @@ map('i', '<C-b>', '<ESC>bi', opt)
 -- 插件快捷键
 local pluginKeys = {}
 
+-- symbols-outline
+map('n', '<leader>s', ':SymbolsOutline<CR>', opt)
+
 -- diffview 快捷键设置
 map('n', '<leader>g', ':DiffviewOpen<CR>', opt)
 map('n', '<leader>G', ':DiffviewFileHistory %<CR>', opt)

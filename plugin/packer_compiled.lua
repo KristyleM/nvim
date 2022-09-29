@@ -220,6 +220,11 @@ _G.packer_plugins = {
     path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/sonokai",
     url = "https://github.com/sainnhe/sonokai"
   },
+  ["symbols-outline.nvim"] = {
+    loaded = true,
+    path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/symbols-outline.nvim",
+    url = "https://github.com/simrat39/symbols-outline.nvim"
+  },
   ["telescope.nvim"] = {
     loaded = true,
     path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/telescope.nvim",
