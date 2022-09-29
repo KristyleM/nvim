@@ -14,6 +14,7 @@ packer.startup({
         use('glepnir/dashboard-nvim')
         use('ahmedkhalf/project.nvim')
         use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
+        use('nvim-treesitter/nvim-treesitter-textobjects')
         use({ 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' })
         --------------------- LSP --------------------
         use('williamboman/nvim-lsp-installer')
@@ -50,6 +51,8 @@ packer.startup({
         use('simrat39/rust-tools.nvim')
         -- 函数、类导航栏
         use('simrat39/symbols-outline.nvim')
+        use('yamatsum/nvim-cursorline')
+        use('kylechui/nvim-surround')
     end,
     config = {
         display = {

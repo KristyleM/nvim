@@ -160,6 +160,11 @@ _G.packer_plugins = {
     path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-cmp",
     url = "https://github.com/hrsh7th/nvim-cmp"
   },
+  ["nvim-cursorline"] = {
+    loaded = true,
+    path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-cursorline",
+    url = "https://github.com/yamatsum/nvim-cursorline"
+  },
   ["nvim-lsp-installer"] = {
     loaded = true,
     path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-lsp-installer",
@@ -175,6 +180,11 @@ _G.packer_plugins = {
     path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-surround"] = {
+    loaded = true,
+    path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-surround",
+    url = "https://github.com/kylechui/nvim-surround"
+  },
   ["nvim-tree.lua"] = {
     loaded = true,
     path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
@@ -184,6 +194,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
     url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-treesitter-textobjects"] = {
+    loaded = true,
+    path = "/Users/heqilong/.local/share/nvim/site/pack/packer/start/nvim-treesitter-textobjects",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter-textobjects"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
