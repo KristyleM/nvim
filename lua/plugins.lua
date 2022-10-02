@@ -57,6 +57,7 @@ packer.startup({
         use('yamatsum/nvim-cursorline')
         use('kylechui/nvim-surround')
         use('lewis6991/gitsigns.nvim')
+        -- DAP debug plugin here
         use('mfussenegger/nvim-dap')
         use('theHamsta/nvim-dap-virtual-text')
         use('rcarriga/nvim-dap-ui')
