@@ -4,6 +4,8 @@ packer.startup({
     function(use)
         -- add plugins here
         use('wbthomason/packer.nvim')
+        use('williamboman/mason.nvim')
+        use('williamboman/mason-lspconfig.nvim')
         use('folke/tokyonight.nvim')
         use('morhetz/gruvbox')
         use('sainnhe/sonokai')
