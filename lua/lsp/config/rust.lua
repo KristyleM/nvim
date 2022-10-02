@@ -24,6 +24,7 @@ return {
             -- We merge the necessary settings from nvim-lsp-installer (server:get_default_options())
             -- with the user's own settings (opts).
             server = vim.tbl_deep_extend('force', server:get_default_options(), opts),
+            dap = require('dap.nvim-dap.rust'),
         })
         server:attach_buffers()
         -- Only if standalone support is needed
