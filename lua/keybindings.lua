@@ -60,7 +60,6 @@ map('v', 'K', ":move '<-2<CR>gv-gv", opt)
 -- 上下滚动浏览
 map('n', '<C-j>', '5j', opt)
 map('n', '<C-k>', '5k', opt)
---
 map('v', '<C-j>', '5j', opt)
 map('v', '<C-k>', '5k', opt)
 -- ctrl u / ctrl + d  只移动10行，默认移动半屏
@@ -76,10 +75,10 @@ map('n', 'Q', ':qa<CR>', opt)
 -- insert 模式下，跳到行首行尾
 map('i', '<C-I>', '<ESC>I', opt)
 map('i', '<C-A>', '<ESC>A', opt)
-map('i', '<C-h>', '<ESC>ha', opt)
-map('i', '<C-j>', '<ESC>ja', opt)
-map('i', '<C-k>', '<ESC>ka', opt)
-map('i', '<C-l>', '<ESC>la', opt)
+map('i', '<C-h>', '<LEFT>', opt)
+map('i', '<C-j>', '<DOWN>', opt)
+map('i', '<C-k>', '<UP>', opt)
+map('i', '<C-l>', '<RIGHT>', opt)
 map('i', '<C-e>', '<ESC>ea', opt)
 map('i', '<C-b>', '<ESC>bi', opt)
 
@@ -227,14 +226,14 @@ pluginKeys.cmp = function(cmp)
         ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
         ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
         -- 自定义代码段跳转到下一个参数
-        ['<C-l>'] = cmp.mapping(function(_)
+        ['<C-[>'] = cmp.mapping(function(_)
             if vim.fn['vsnip#available'](1) == 1 then
                 feedkey('<Plug>(vsnip-expand-or-jump)', '')
             end
         end, { 'i', 's' }),
 
         -- 自定义代码段跳转到上一个参数
-        ['<C-h>'] = cmp.mapping(function()
+        ['<C-]>'] = cmp.mapping(function()
             if vim.fn['vsnip#jumpable'](-1) == 1 then
                 feedkey('<Plug>(vsnip-jump-prev)', '')
             end
