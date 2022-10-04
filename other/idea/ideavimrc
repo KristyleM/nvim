@@ -1,0 +1,186 @@
+" 主要leader
+let mapleader=' '
+
+" 在normal模式下保持英文输入法（IdeaVimExtension）
+set keep-english-in-normal
+" 在normal模式下保持英文输入法，插入模式下回复插入模式时的输入法（IdeaVimExtension）
+" :set keep-english-in-normal-and-restore-in-insert
+set keep-english-in-normal-and-restore-in-insert
+
+ Plug 'easymotion/vim-easymotion'
+set easymotion
+
+" """ Plugins  --------------------------------
+" set surround
+" set multiple-cursors
+" set commentary
+" set argtextobj
+" set easymotion
+" set textobj-entire
+" set ReplaceWithRegister
+" set exchange
+" set vim-paragraph-motion
+" set textobj-indent
+
+" """ Plugin settings -------------------------
+" let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+" 搜索高亮
+set hlsearch
+" 模式搜索实时预览，增量搜索
+set incsearch
+" 忽略大小写
+set ignorecase
+" 智能忽略大小写
+set smartcase
+nnoremap <leader>c :nohlsearch<CR>
+" 显示当前的模式
+set showmode
+" 显示当前行号
+set number
+" 相关行号
+set relativenumber
+
+set scrolloff=5
+" 设置命令历史记录条数
+set history=100
+" 共享系统粘贴板
+set clipboard=unnamed
+" 基于缩进或语法进行代码折叠
+" set foldmethod=syntax
+" 启动vim 时关闭折叠代码
+" set nofoldenable
+" 关闭兼容vi
+" set nocompatible
+" 开启高亮语法
+" syntax enable
+" 允许使用指定语法高亮配色方案替换默认方案
+" syntax on
+" vim 智能命令行模式智能不全
+" set wildmenu
+" 总是显示状态栏
+" set laststatus=2
+" 显示光标当前位置
+" set ruler
+" 禁止折行
+" set nowrap
+" 将制表符扩展为空格
+" set expandtab
+" 设置编辑时制表符占用空格数
+" set shiftwidth=1
+
+""" Idea specific settings ------------------
+" use shift + j to do this
+set ideajoin
+
+""" Strict mode for development ---------------
+set ideastrictmode
+"
+"
+" move
+nnoremap s 
+nnoremap sv :vsplit<CR>
+nnoremap sh :split<CR>
+nnoremap <C-h> 5h
+nnoremap <C-j> 5j
+nnoremap <C-k> 5k
+nnoremap <C-l> 5l
+nnoremap <C-u> 10k
+nnoremap <C-d> 10j
+nnoremap H ^
+nnoremap L $
+imap <C-j> <Down>
+imap <C-k> <Up>
+imap <C-h> <Left>
+imap <C-l> <Right>
+imap <C-i> <CR>
+" 代码提示 
+
+" """"""""""""""""""""""""""""""""""""""Jump""""""""""""""""""""""""""""""""
+nnoremap ge :action GotoNextError<CR>
+nnoremap gE :action GotoPreviousError<CR>
+nnoremap gi :action GotoImplementation<CR>
+nnoremap gs :action gotoSuperMethod<CR>
+" nnoremap gd :action MethodDown<CR>
+" nnoremap gu :action MethodUp<CR>
+nnoremap ga :<C-u>action GotoAction<CR>
+nnoremap gb :<C-u>action JumpToLastChange<CR>
+nnoremap gd :<C-u>action GotoDeclaration<CR>
+nnoremap gs :<C-u>action GotoSuperMethod<CR>
+nnoremap gf :<C-u>action GotoFile<CR>
+nnoremap gm :<C-u>action GotoSymbol<CR>
+nnoremap su :<C-u>action ShowUsages<CR>
+nnoremap gt :<C-u>action GotoTest<CR>
+
+" """"""""""""""""""""""""""""""""""""""effective""""""""""""""""""""""""""""""""
+nnoremap <Leader>sw :action SurroundWith<CR>
+nnoremap <Leader>oi :action OptimizeImports<CR>
+nnoremap <Leader>tz :action ToggleZenMode<CR>
+nnoremap <leader>ns :action NewScratchFile<CR>
+nnoremap <Leader>ic :action InspectCode<CR>
+" " 断行
+nnoremap <CR> a<CR><Esc>k$
+" " I think it's a better solution
+nnoremap U <C-r>
+" """"""""""""""""""""""""""""""""""""""Window""""""""""""""""""""""""""""""""
+nnoremap <Leader>ww <C-W>w
+nnoremap <Leader>wd <C-W>c
+nnoremap <Leader>wj <C-W>j
+nnoremap <Leader>wk <C-W>k
+nnoremap <Leader>wh <C-W>h
+nnoremap <Leader>wl <C-W>l
+nnoremap <Leader>ws <C-W>s
+nnoremap <Leader>wv <C-W>v
+" """"""""""""""""""""""""""""""""""""""Fix""""""""""""""""""""""""""""""""
+nnoremap <Leader>fd :action FixDocComment<CR>
+nnoremap <Leader>re :action RenameElement<CR>
+nnoremap <Leader>rf :action RenameFile<CR>
+nnoremap <Leader>fc :action ReformatCode<CR>
+vnoremap <Leader>ec :action ExtractMethod<CR>
+" """"""""""""""""""""""""""""""""""""""Vcs""""""""""""""""""""""""""""""""
+" nnoremap <Leader>vp :action Vcs.QuickListPopupAction<CR>
+" nnoremap <Leader>vb :action Vcs.ShowBranches<CR>
+" nnoremap <leader>vh :action Vcs.ShowTabbedFileHistory<CR>
+" """"""""""""""""""""""""""""""""""""""Generate""""""""""""""""""""""""""""""""
+" nnoremap <leader>ge :action Generate<CR>
+" nnoremap <Leader>im :action ImplementMethods<CR>
+" nnoremap <Leader>om :action OverrideMethods<CR>
+" nnoremap <Leader>nc :action NewClass<CR>
+" """"""""""""""""""""""""""""""""""""""Debug""""""""""""""""""""""""""""""""
+" nnoremap <leader>tb :action ToggleLineBreakpoint<CR>
+" nnoremap <Leader>vb :action ViewBreakpoints<CR>
+"
+" """"""""""""""""""""""""""""""""""""""Start and stop""""""""""""""""""""""""""""""""
+"
+" nnoremap <Leader>d :action Debug<CR>
+" nnoremap <Leader>r :action Run<CR>
+" nnoremap <Leader>rc :action Stop<CR>
+" nnoremap <Leader>rr :action Rerun<CR>
+" nnoremap <Leader>rm :action RunClass<CR>
+" nnoremap <Leader>cd :action ChooseDebugConfiguration<CR>
+" nnoremap <Leader>cr :action ChooseRunConfiguration<CR>
+" """"""""""""""""""""""""""""""""""""""Show""""""""""""""""""""""""""""""""
+" nnoremap <Leader>sd :action ShowUmlDiagram<CR>
+" nnoremap <Leader>th :action TypeHierarchy<CR>
+" nnoremap <Leader>fu :action FindUsages<CR>
+" nnoremap <Leader>su :action ShowUsages<CR>
+" nnoremap <Leader>mh :action MethodHierarchy<CR>
+" nnoremap <Leader>ss :action ShowSettings<CR>
+" nnoremap <Leader>sp :action ShowFilePath<CR>
+" nnoremap <Leader>se :action ShowErrorDescription<CR>
+" nnoremap <Leader>pm :action ShowPopupMenu<CR>
+" nnoremap <Leader>rf :action RecentFiles<CR>
+" nnoremap <Leader>jd :action QuickJavaDoc<CR>
+" nnoremap <leader>a :action Annotate<CR>
+" nnoremap <leader>sn :action ShowNavBar<CR>
+" nnoremap <Leader>sp :action FileStructurePopup<CR>
+" """"""""""""""""""""""""""""""""""""""Search""""""""""""""""""""""""""""""""
+" nnoremap <Leader>ga :action GotoAction<CR>
+" nnoremap <Leader>gc :action GotoClass<CR>
+" nnoremap <Leader>gf :action GotoFile<CR>
+" " Tab operation
+" nnoremap gn gt
+" nnoremap gp gT
+" Find more examples here: https://jb.gg/share-ideavimrc
+
