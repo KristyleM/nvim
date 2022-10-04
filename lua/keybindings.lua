@@ -264,11 +264,11 @@ pluginKeys.cmp = function(cmp)
 end
 
 -- typescript 快捷键
-pluginKeys.mapTsLSP = function(mapbuf)
-    mapbuf('n', 'gs', ':TSLspOrganize<CR>', opt)
-    mapbuf('n', 'gr', ':TSLspRenameFile<CR>', opt)
-    mapbuf('n', 'gi', ':TSLspImportAll<CR>', opt)
-end
+-- pluginKeys.mapTsLSP = function(mapbuf)
+--     mapbuf('n', 'gs', ':TSLspOrganize<CR>', opt)
+--     mapbuf('n', 'gr', ':TSLspRenameFile<CR>', opt)
+--     mapbuf('n', 'gi', ':TSLspImportAll<CR>', opt)
+-- end
 
 -- 代码注释插件
 -- see ./lua/plugin-config/comment.lua
