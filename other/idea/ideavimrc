@@ -88,6 +88,10 @@ nnoremap <C-k> 5k
 nnoremap <C-l> 5l
 nnoremap <C-u> 10k
 nnoremap <C-d> 10j
+vnoremap <C-j> 5j
+vnoremap <C-k> 5k
+vnoremap <C-u> 10k
+vnoremap <C-d> 10j
 nnoremap H ^
 nnoremap L $
 imap <C-j> <Down>
