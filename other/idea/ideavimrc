@@ -45,8 +45,6 @@ set relativenumber
 set scrolloff=5
 " 设置命令历史记录条数
 set history=100
-" 共享系统粘贴板
-set clipboard=unnamed
 " 基于缩进或语法进行代码折叠
 " set foldmethod=syntax
 " 启动vim 时关闭折叠代码
@@ -100,6 +98,10 @@ imap <C-h> <Left>
 imap <C-l> <Right>
 imap <C-i> <CR>
 " 代码提示 
+
+" """"""""""""""""""""""""""""""""""""""寄存器"""""""""""""""""""""""""""""""
+nnoremap \\ "+
+vnoremap \\ "+
 
 " """"""""""""""""""""""""""""""""""""""Jump""""""""""""""""""""""""""""""""
 nnoremap ge :action GotoNextError<CR>
